@@ -1,0 +1,70 @@
+{
+  "last_updated": "2026-01-06 17:29:47",
+  "analysis_period": "oct2025",
+  "transformers": {
+    "T12": {
+      "pattern_interpretation": "The Unity Energy chart for Foster Farms' Cherry Ave Facility reveals a remarkably consistent electrical profile across January 2025, with a standard production pattern peaking at 2,100 kVA during weekday operations.\n\nTarget Identification:\nScanning the month, 17 distinct days show consistent energy patterns, establishing a robust baseline. These days cluster around 2,100 kVA peak height, with a stable green reactive layer representing approximately 15-20% energy waste. The transformer, rated at 2500 kVA, operates efficiently at roughly 84% of its maximum capacity during standard production.\n\nBest Week Analysis:\nWeek 3 (Jan 13-19) emerges as the most stable, with all 5 weekdays displaying near-identical energy consumption patterns. This week represents the operational gold standard, characterized by smooth power factor performance and minimal variance in load.\n\nWeekly Comparisons:\n- Week 1 ran approximately 10-12% below the target, showing slower ramp-up and less consistent production\n- Week 2 matched target more closely but showed intermittent control system oscillations\n- Week 3 (benchmark week) demonstrated perfect operational consistency\n- Week 4 exhibited slight performance degradation, running about 7-8% below target\n- Week 5 showed recovery, nearly matching week 3 performance\n\nSaturday Production:\nSaturday performances varied:\n- Jan 4: Minimal operation, reaching only 800-900 kVA\n- Jan 11: Partial day, around 1,200 kVA\n- Jan 18: More robust Saturday, reaching 1,500 kVA\n- Jan 25: Similar to Jan 18, suggesting potential weekend catch-up production\n\nAnomaly Detection:\nCritical anomalies include:\n- Demand charge spikes on Jan 23-24, reaching 1,500 kVA during elevated baseline operation\n- Weekend thin spikes on Jan 4-5 and Jan 18-19, likely equipment testing cycles\n- Brief power interruption on Jan 16, visible as a vertical gap in the energy field\n- Power factor oscillations on Jan 5 and 12, indicating potential VFD or control system instability\n\nPower Factor and Efficiency:\nThe orange power factor line remains predominantly smooth, indicating stable electrical performance. The current 82.5% power factor means 17.5% conversion inefficiency, represented by the green reactive layer. This translates to approximately 215-250 kVAR of wasted reactive power throughout the month.",
+      "pattern_summary": [
+        "Establish 2,100 kVA as standard weekday production baseline",
+        "Investigate demand charge spikes on Jan 23-24 potentially costing thousands in penalties",
+        "Optimize power factor from 82.5% to 90%+ to reduce reactive waste",
+        "Review VFD and control systems showing oscillations on Jan 5 and 12",
+        "Analyze weekend production strategies, especially partial Saturday operations",
+        "Examine Jan 16 power interruption for potential equipment or grid connection issues",
+        "Develop load management strategy to minimize peaks above 1,500 kVA",
+        "Implement reactive power compensation to reduce green layer waste",
+        "Standardize Saturday production protocols",
+        "Create a precise demand management plan to avoid utility penalty charges"
+      ],
+      "last_analyzed": "2026-01-06 17:29:47"
+    },
+    "T16": {
+      "pattern_interpretation": "Scanning the January 2025 energy field reveals a remarkably consistent production pattern. The target baseline emerges from approximately 17 weekdays showing nearly identical energy consumption characteristics, consistently peaking around 1250 kVA with a stable power factor and predictable layer structure.\n\nWeek 3 (Jan 13-19) emerges as the most stable week, serving as the benchmark for performance. This week demonstrates near-perfect operational consistency across all five weekdays, with uniform dark blue (supplied power), light blue (consumed power), and green (reactive power) layers.\n\nThe weekday patterns show remarkable similarity:\n- Consistent peak height around 1250 kVA\n- Stable power factor (orange line) hovering around 88-92%\n- Green reactive waste layer maintaining a consistent thickness of approximately 10-15% of total supply\n\nSaturday productions show interesting variations:\n- Jan 4: Partial day, reaching about 800-900 kVA\n- Jan 11: Similar partial production profile\n- Jan 18: Slightly more extended production, closer to 1000 kVA\n- Jan 25: Comparable to previous Saturdays\n\nCritical anomalies detected:\n- Demand charge spikes on Jan 23-24, reaching 1500 kVA during elevated baseline operation\n- Weekend thin spikes on Jan 4-5 and Jan 18-19, likely equipment testing cycles\n- Brief power interruption visible on Jan 16 with a vertical gap mid-day\n\nThe power factor demonstrates overall stability, with occasional oscillations suggesting potential VFD or motor control system subtle instabilities. The 88.2% power factor indicates reasonable efficiency, with approximately 11.8% energy conversion waste.\n\nACTION",
+      "pattern_summary": [
+        "Investigate demand charge spikes on Jan 23-24 potentially triggering expensive utility penalties",
+        "Optimize load management during high production periods to reduce peak kVA",
+        "Review VFD and motor control systems for subtle oscillation sources",
+        "Analyze weekend testing cycles for potential energy optimization",
+        "Examine the Jan 16 power interruption for root cause and prevention",
+        "Standardize Saturday production protocols for more consistent performance",
+        "Develop strategies to reduce reactive power waste (green layer)",
+        "Implement more precise load balancing to maintain consistent 1250 kVA baseline",
+        "Create alert system for unexpected vertical gap interruptions",
+        "Conduct detailed equipment diagnostic for sources of power factor variations"
+      ],
+      "last_analyzed": "2026-01-06 17:29:47"
+    },
+    "T10": {
+      "pattern_interpretation": "Scanning the month-long energy field reveals a consistent production pattern primarily centered around 1100 kVA for weekday operations. Approximately 16-17 days show this stable baseline, establishing our target performance benchmark.\n\nWeek 3 (January 13-19) emerges as the most stable week, with near-identical weekday patterns reaching consistently around 1100 kVA. This week serves as our primary performance reference point.\n\nWeekday patterns demonstrate remarkable consistency, with light blue (consumed power) and dark blue (supplied power) layers showing predictable behavior. The green reactive power layer remains relatively thin, indicating reasonably efficient energy conversion.\n\nSaturday productions show interesting variance. Some Saturdays run at half-day or reduced load (around 700-800 kVA), while others maintain near-weekday levels, suggesting flexible weekend operational strategies.\n\nNotable anomalies include:\n- Jan 23-24 shows peak demand spikes reaching 1500 kVA during elevated 1250 kVA baseline operation\n- Several weekend thin spikes indicate potential equipment testing or maintenance cycles\n- Brief vertical gaps suggest potential momentary power interruptions\n\nThe power factor (orange line) remains relatively stable, hovering around 88.6%, with minimal oscillations. This indicates a well-controlled electrical environment with consistent energy quality.\n\nProduction variance analysis shows 5 days running approximately 13-15% above the 1100 kVA target, likely representing catch-up or high-demand production periods.\n\nThe green reactive power layer consistently represents about 10-13% of total supply, translating to moderate but manageable energy waste.",
+      "pattern_summary": [
+        "Establish 1100 kVA as standard weekday production baseline",
+        "Investigate demand charge spikes on Jan 23-24 exceeding 1500 kVA",
+        "Optimize weekend equipment testing to reduce unnecessary power draws",
+        "Review Saturday operational strategies for consistent load management",
+        "Maintain current power factor performance around 88.6%",
+        "Analyze the 5 high-production days running 13% above target",
+        "Implement load-leveling strategies during peak production periods",
+        "Conduct root cause analysis for brief power interruption events",
+        "Develop strategy to reduce reactive power waste from 10-13% to <10%",
+        "Consider energy storage or power quality improvements to smooth peak demands"
+      ],
+      "last_analyzed": "2026-01-06 17:29:47"
+    },
+    "T15": {
+      "pattern_interpretation": "The Foster Farms Cherry Ave Facility energy profile for January 2025 reveals a remarkably consistent production pattern with fascinating electrical physics insights. After careful analysis, the target baseline emerges from approximately 17-18 weekdays showing a remarkably stable 1250 kVA peak load.\n\nWeek 3 (January 13-19) stands out as the most stable operational week, establishing our critical benchmark. This week demonstrates near-perfect consistency in daily energy consumption, with all five weekdays displaying nearly identical energy field characteristics - a hallmark of optimized industrial performance.\n\nThe weekday patterns consistently reach around 1250 kVA, with a power factor hovering around 86-88%, indicating efficient energy conversion. The green reactive layer remains relatively thin, suggesting minimal energy waste. Notably, the dark blue (supplied power) and light blue (consumed power) layers show tight alignment, reflecting sophisticated power management.\n\nSaturdays present interesting variations. While not full production days, they show purposeful energy utilization - likely maintenance, cleaning, or partial processing cycles. Jan 4, 18, and 25 Saturdays demonstrate controlled energy draw, typically reaching 800-1000 kVA, significantly below weekday peaks but far from idle.\n\nDemand charge risk emerges during several periods, particularly Jan 23-24, where peaks momentarily spike to 1500 kVA during already elevated 1250 kVA baseline operation. These spikes could trigger substantial utility penalties, potentially costing thousands in additional charges.\n\nWeekend anomalies, particularly on Jan 4-5 and Jan 18-19, reveal thin but sharp spikes to ~1400 kVA - likely equipment startup tests, refrigeration cycles, or system calibrations. While financially less impactful than demand spikes, they represent inefficient energy management.\n\nPower factor oscillations on Jan 5 and 12 suggest potential variable frequency drive (VFD) or motor control system instabilities. These rapid orange line fluctuations indicate potential equipment tuning opportunities to improve energy quality.\n\nThe transformer operated at approximately 41.7% of its 3000 kVA rated capacity, showing robust headroom for potential future production scaling. The consistent 1250 kVA pattern suggests a well-managed, stable industrial process with predictable energy requirements.",
+      "pattern_summary": [
+        "Establish 1250 kVA as standard daily production baseline across 17-18 weekdays",
+        "Mitigate demand charge risks by managing peaks during Jan 23-24 high-load periods",
+        "Investigate VFD and motor control systems showing oscillations on Jan 5 and 12",
+        "Optimize Saturday startup/maintenance cycles to reduce unnecessary energy consumption",
+        "Review weekend equipment test protocols to minimize reactive power spikes",
+        "Implement load management strategy to prevent utility demand charge penalties",
+        "Maintain current 86-88% power factor through continued equipment maintenance",
+        "Analyze potential production scaling given 58.3% transformer capacity reserve",
+        "Document and standardize Week 3 (Jan 13-19) as benchmark operational performance",
+        "Develop energy efficiency program targeting reduction of green reactive layer thickness"
+      ],
+      "last_analyzed": "2026-01-06 17:29:47"
+    }
+  }
+}
