@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Energy Field Report - FosterFarms January 2026</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.2em;
+        }
+        
+        .site-summary {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .site-summary h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .site-summary-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .site-summary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .transformers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .transformer-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .transformer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        .transformer-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        
+        .dashboard-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .dashboard-btn {
+            display: block;
+            padding: 12px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            transition: opacity 0.3s, transform 0.2s;
+            font-size: 1em;
+        }
+        
+        .dashboard-btn:hover {
+            opacity: 0.9;
+            transform: translateX(5px);
+        }
+        
+        footer {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-size: 0.9em;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .transformers {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Unity Energy Field Report</h1>
+            <p><strong>Facility:</strong> FosterFarms</p>
+            <p class="period">📅 January 2026</p>
+        </header>
+        
+        <div class="site-summary">
+            <h2>Facility Summary</h2>
+            <p>View comprehensive analysis across all equipment</p>
+            <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/CherryAve_Site/" class="site-summary-btn">View Full Report →</a>
+        </div>
+        
+        <h2 style="color: white; margin-bottom: 20px; text-align: center; font-size: 1.8em;">Equipment Analysis</h2>
+        
+        <div class="transformers">
+            
+        <div class="transformer-card" style="border-left: 5px solid #3498db;">
+            <h3 style="color: #3498db;">T10.AirChiller</h3>
+            <div class="dashboard-buttons">
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T10.AirChiller_AN53111387/FIELD-Energyboard_T10.AirChiller_AN53111387_250101-250131.html" class="dashboard-btn" style="background-color: #3498db;">
+                    ⚡ Energy
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T10.AirChiller_AN53111387/FIELD-Heatboard_T10.AirChiller_AN53111387_250101-250131.html" class="dashboard-btn" style="background-color: #3498db;">
+                    🔥 Heat
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T10.AirChiller_AN53111387/FIELD-Voltboard_T10.AirChiller_AN53111387_250101-250131.html" class="dashboard-btn" style="background-color: #3498db;">
+                    ⚙️ Voltage
+                </a>
+            </div>
+        </div>
+        
+        <div class="transformer-card" style="border-left: 5px solid #2ecc71;">
+            <h3 style="color: #2ecc71;">T12.Main</h3>
+            <div class="dashboard-buttons">
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T12.Main_AN54021613/FIELD-Energyboard_T12.Main_AN54021613_250101-250131.html" class="dashboard-btn" style="background-color: #2ecc71;">
+                    ⚡ Energy
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T12.Main_AN54021613/FIELD-Heatboard_T12.Main_AN54021613_250101-250131.html" class="dashboard-btn" style="background-color: #2ecc71;">
+                    🔥 Heat
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T12.Main_AN54021613/FIELD-Voltboard_T12.Main_AN54021613_250101-250131.html" class="dashboard-btn" style="background-color: #2ecc71;">
+                    ⚙️ Voltage
+                </a>
+            </div>
+        </div>
+        
+        <div class="transformer-card" style="border-left: 5px solid #e74c3c;">
+            <h3 style="color: #e74c3c;">T15.Fillet</h3>
+            <div class="dashboard-buttons">
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T15.Fillet_AN53110845/FIELD-Energyboard_T15.Fillet_AN53110845_250101-250131.html" class="dashboard-btn" style="background-color: #e74c3c;">
+                    ⚡ Energy
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T15.Fillet_AN53110845/FIELD-Heatboard_T15.Fillet_AN53110845_250101-250131.html" class="dashboard-btn" style="background-color: #e74c3c;">
+                    🔥 Heat
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T15.Fillet_AN53110845/FIELD-Voltboard_T15.Fillet_AN53110845_250101-250131.html" class="dashboard-btn" style="background-color: #e74c3c;">
+                    ⚙️ Voltage
+                </a>
+            </div>
+        </div>
+        
+        <div class="transformer-card" style="border-left: 5px solid #f39c12;">
+            <h3 style="color: #f39c12;">T16.Compressor</h3>
+            <div class="dashboard-buttons">
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T16.Compressor_AN54022983/FIELD-Energyboard_T16.Compressor_AN54022983_250101-250131.html" class="dashboard-btn" style="background-color: #f39c12;">
+                    ⚡ Energy
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T16.Compressor_AN54022983/FIELD-Heatboard_T16.Compressor_AN54022983_250101-250131.html" class="dashboard-btn" style="background-color: #f39c12;">
+                    🔥 Heat
+                </a>
+                <a href="https://helirush.github.io/eefields/Study251228r0/FosterFarms/T16.Compressor_AN54022983/FIELD-Voltboard_T16.Compressor_AN54022983_250101-250131.html" class="dashboard-btn" style="background-color: #f39c12;">
+                    ⚙️ Voltage
+                </a>
+            </div>
+        </div>
+        
+        </div>
+        
+        <footer>
+            <p>Generated on January 11, 2026 at 11:06 AM</p>
+            <p>Unity Energy Field Analysis System</p>
+        </footer>
+    </div>
+</body>
+</html>
