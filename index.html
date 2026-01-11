@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Energy - Foster Farms Energy Field Analysis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #ffd700;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .video-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 40px 0;
+        }
+
+        video {
+            width: 100%;
+            display: block;
+            background: #000;
+        }
+
+        .welcome-text {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            border-top: 4px solid #667eea;
+        }
+
+        .highlight-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .highlight-card p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .expert-section {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .expert-name {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .expert-title {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .expert-bio {
+            color: #555;
+            font-size: 1.05em;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 12px;
+            margin: 50px 0;
+        }
+
+        .cta-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #667eea;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background: #667eea;
+            color: white;
+            margin-top: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.05em;
+            }
+
+            section {
+                margin: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">⚡ <span>UNITY</span> ENERGY</div>
+        <nav>
+            <a href="#welcome">Welcome</a>
+            <a href="#analysis">Analysis</a>
+            <a href="#explore">Explore</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to Unity Energy</h1>
+        <p>Industrial Electricity Analysis for Foster Farms</p>
+        <p class="subtitle">Understanding Your Energy Fields</p>
+    </div>
+
+    <div class="container">
+        <section id="welcome">
+            <h2 class="section-title">Your Energy Field Journey Begins</h2>
+            
+            <p class="welcome-text">
+                At Unity Energy, we specialize in analyzing the electrical systems that power your operations. 
+                We've been studying your Foster Farms site at Cherry Avenue, and we're excited to share what 
+                we've discovered about your industrial electricity patterns and the value of harmonizing each 
+                of your active energy fields.
+            </p>
+
+            <p class="welcome-text">
+                This interactive analysis platform gives you unprecedented insight into how your transformers, 
+                chillers, compressors, and other equipment are operating. You'll see energy consumption patterns, 
+                thermal behavior, and electrical characteristics in real-time, with actionable insights for optimization.
+            </p>
+
+            <div class="video-container">
+                <video controls>
+                    <source src="./CherryAveSite.M4V" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="highlights">
+                <div class="highlight-card">
+                    <h3>8 Energy Fields</h3>
+                    <p>Identified and monitored across your property</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>4 Transformers Analyzed</h3>
+                    <p>Deep-dive into equipment performance and efficiency</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>Real-Time Dashboards</h3>
+                    <p>Energy, heat, and voltage patterns at your fingertips</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="expert">
+            <div class="expert-section">
+                <div class="expert-name">Graham Maxwell</div>
+                <div class="expert-title">Field Behavior Expert</div>
+                <div class="expert-bio">
+                    Graham Maxwell is our lead Field Behavior expert with deep expertise in industrial 
+                    electrical systems. With years of experience analyzing complex energy patterns, Graham 
+                    brings actionable insights to help you optimize your facility's electrical performance 
+                    and reduce operational costs.
+                </div>
+                <p style="color: #999; font-style: italic;">
+                    "Your energy fields tell a story. Let's learn it together."
+                </p>
+            </div>
+        </section>
+
+        <section id="analysis">
+            <h2 class="section-title">What You'll Discover</h2>
+            <div class="highlights">
+                <div class="highlight-card">
+                    <h3>⚡ Energy Consumption</h3>
+                    <p>Detailed patterns showing when and where your facility uses power</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>🔥 Thermal Analysis</h3>
+                    <p>Heat burden across transformers and cooling systems</p>
+                </div>
+                <div class="highlight-card">
+                    <h3>⚙️ Voltage Stability</h3>
+                    <p>Power quality metrics and electrical stability indicators</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="explore">
+            <div class="cta-section">
+                <h2>Ready to Explore Your Energy Fields?</h2>
+                <p>Let's dive into the interactive dashboards and understand your electrical systems</p>
+                <a href="./Study260106r0/FosterFarms/index.html" class="btn btn-primary">View Your Analysis →</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Unity Energy. All rights reserved.</p>
+        <p>Transforming how facilities understand their electrical systems.</p>
+    </footer>
+</body>
+</html>
