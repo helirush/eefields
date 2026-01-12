@@ -65,7 +65,7 @@
         }
 
         .hero {
-            background: url('foster-farms-hero.jpg') center center / cover no-repeat;
+            background: url('foster-farms-hero.png') center top / cover no-repeat;
             position: relative;
             color: white;
             padding: 0;
@@ -84,6 +84,15 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        .hero-logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 2;
+            max-width: 250px;
+            height: auto;
         }
 
         .hero-content {
@@ -327,6 +336,7 @@
     </header>
 
     <div class="hero">
+        <img src="foster-farms-logo.png" alt="Foster Farms Logo" class="hero-logo">
         <div class="hero-content">
             <h1>Electrical Energy Stewardship</h1>
             <p>Foster Farms Energy Analysis</p>
