@@ -1015,6 +1015,10 @@
     📞 UNITY CONTACT DETAILS
   </button>
 </div>
+<!-- Back Navigation - Top -->
+<div style="text-align: center; padding: 10px 0; margin-bottom: 10px;">
+  <a href="../../../index.html" style="display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, #CC0000 0%, #8B0000 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.05em; transition: transform 0.3s, box-shadow 0.3s; border: 2px solid #FFD700;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(204, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">← Back to Cherry Avenue</a>
+</div>
 <div class="dashboard-grid layout-4">
 <div class="xfmr-card" id="xfmr1-card">
 <h2>
@@ -1945,7 +1949,7 @@
         wrap.style.border = '2px solid #5D701A';
         wrap.style.borderRadius = '8px';
         wrap.style.background = '#fff';
-        wrap.style.maxHeight = '500px';
+        wrap.style.maxHeight = '1200px';
         wrap.style.position = 'relative';
         
         // Keep image responsive but allow zoom
@@ -1960,20 +1964,23 @@
         parent.replaceChild(wrap, imgEl);
         wrap.appendChild(imgEl);
 
-        // Toolbar positioned over the image
+        // Toolbar positioned in modal header (not over image)
         const bar = document.createElement('div');
-        bar.style.position = 'absolute';
-        bar.style.right = '10px';
-        bar.style.top = '10px';
+        bar.id = 'zoomControls';
         bar.style.display = 'flex';
         bar.style.gap = '6px';
-        bar.style.zIndex = '1000';
-        const makeBtn = (label)=>{ const b=document.createElement('button'); b.textContent=label; b.style.padding='6px 12px'; b.style.border='1px solid #5D701A'; b.style.background='#ffffff'; b.style.color='#314100'; b.style.borderRadius='4px'; b.style.cursor='pointer'; b.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)'; return b; };
+        bar.style.alignItems = 'center';
+        const makeBtn = (label)=>{ const b=document.createElement('button'); b.textContent=label; b.style.padding='8px 14px'; b.style.border='1px solid #5D701A'; b.style.background='#ffffff'; b.style.color='#314100'; b.style.borderRadius='4px'; b.style.cursor='pointer'; b.style.boxShadow='0 2px 4px rgba(0,0,0,0.2)'; b.style.fontWeight='600'; return b; };
         const plus = makeBtn('+');
         const minus = makeBtn('−');
         const reset = makeBtn('Reset');
-        bar.appendChild(plus); bar.appendChild(minus); bar.appendChild(reset);
-        wrap.appendChild(bar);
+        bar.appendChild(minus); bar.appendChild(reset); bar.appendChild(plus);
+        
+        // Insert zoom controls next to audio button in header
+        const headerDiv = document.querySelector('.pattern-modal-header > div');
+        if (headerDiv) {
+          headerDiv.insertBefore(bar, headerDiv.firstChild);
+        }
 
         let scale = 1.0;
         const apply = ()=>{ 
@@ -2488,8 +2495,8 @@
   </div>
 </div>
 
-<!-- Back Navigation -->
-<div style="text-align: center; padding: 40px; margin-top: 40px;">
+<!-- Back Navigation - Bottom -->
+<div style="text-align: center; padding: 20px; margin-top: 20px;">
   <a href="../../../index.html" style="display: inline-block; padding: 12px 32px; background: linear-gradient(135deg, #CC0000 0%, #8B0000 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1.05em; transition: transform 0.3s, box-shadow 0.3s; border: 2px solid #FFD700;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 25px rgba(204, 0, 0, 0.4)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">← Back to Cherry Avenue</a>
 </div>
 
