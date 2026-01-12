@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foster Farms - Energy Field Analysis Portal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8em;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #81a32b;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #81a32b;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            opacity: 0.95;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        section {
+            margin: 60px 0;
+        }
+
+        .section-title {
+            font-size: 2.2em;
+            color: #314100;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .sites-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .site-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.15);
+        }
+
+        .site-header {
+            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .site-name {
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .site-location {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .site-content {
+            padding: 30px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .site-description {
+            color: #666;
+            font-size: 1.05em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            flex: 1;
+        }
+
+        .site-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+            padding: 20px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #d37100;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        .site-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05em;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .site-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(49, 65, 0, 0.3);
+        }
+
+        .info-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 40px 0;
+        }
+
+        .info-section h3 {
+            color: #314100;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .info-section p {
+            color: #666;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 1.05em;
+            }
+
+            section {
+                margin: 40px 0;
+            }
+
+            .sites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">⚡ <span>UNITY</span> ENERGY</div>
+        <nav>
+            <a href="../">Back to eeFields</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Foster Farms</h1>
+        <p>Energy Field Analysis Portal</p>
+        <p class="subtitle">Multiple Sites, Real-Time Insights</p>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2 class="section-title">Select Your Site</h2>
+
+            <div class="sites-grid">
+                <!-- Cherry Avenue Site -->
+                <a href="./cherryave/" class="site-card">
+                    <div class="site-header">
+                        <div class="site-name">Cherry Avenue</div>
+                        <div class="site-location">Fresno, CA</div>
+                    </div>
+                    <div class="site-content">
+                        <p class="site-description">
+                            Our flagship site with comprehensive electrical field analysis. Features two major studies covering 31+ days of detailed energy patterns.
+                        </p>
+                        <div class="site-stats">
+                            <div class="stat">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label">Studies</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">4</div>
+                                <div class="stat-label">Transformers</div>
+                            </div>
+                        </div>
+                        <button class="site-btn">Explore →</button>
+                    </div>
+                </a>
+
+                <!-- Livingston Site -->
+                <a href="./livingston/" class="site-card">
+                    <div class="site-header">
+                        <div class="site-name">Livingston</div>
+                        <div class="site-location">Coming Soon</div>
+                    </div>
+                    <div class="site-content">
+                        <p class="site-description">
+                            Detailed analysis of the Livingston facility's electrical systems. Studies and insights coming soon.
+                        </p>
+                        <div class="site-stats">
+                            <div class="stat">
+                                <div class="stat-number">—</div>
+                                <div class="stat-label">Studies</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">—</div>
+                                <div class="stat-label">Transformers</div>
+                            </div>
+                        </div>
+                        <button class="site-btn" disabled style="opacity: 0.5; cursor: not-allowed;">Coming Soon</button>
+                    </div>
+                </a>
+
+                <!-- Belgravia Site -->
+                <a href="./belgravia/" class="site-card">
+                    <div class="site-header">
+                        <div class="site-name">Belgravia</div>
+                        <div class="site-location">Coming Soon</div>
+                    </div>
+                    <div class="site-content">
+                        <p class="site-description">
+                            In-depth examination of the Belgravia location's energy infrastructure. Analysis launching soon.
+                        </p>
+                        <div class="site-stats">
+                            <div class="stat">
+                                <div class="stat-number">—</div>
+                                <div class="stat-label">Studies</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-number">—</div>
+                                <div class="stat-label">Transformers</div>
+                            </div>
+                        </div>
+                        <button class="site-btn" disabled style="opacity: 0.5; cursor: not-allowed;">Coming Soon</button>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section>
+            <div class="info-section">
+                <h3>About Foster Farms Energy Analysis</h3>
+                <p>
+                    Unity Energy provides comprehensive electrical field analysis across Foster Farms' operations. 
+                    Each site is monitored with dedicated study teams analyzing energy consumption, thermal patterns, 
+                    and voltage stability. Our multi-site approach enables facility managers to understand their electrical 
+                    systems and identify optimization opportunities across all locations.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Unity Energy. All rights reserved.</p>
+        <p>Transforming how facilities understand their electrical systems.</p>
+    </footer>
+</body>
+</html>
