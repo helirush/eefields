@@ -19,63 +19,136 @@
         }
 
         header {
-            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            background: linear-gradient(135deg, #CC0000 0%, #8B0000 100%);
             color: white;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 4px solid #FFD700;
         }
 
-        .logo {
+        .site-title {
             font-size: 1.8em;
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #FFD700;
+            text-transform: uppercase;
         }
 
-        .logo span {
-            color: #81a32b;
+        .site-subtitle {
+            font-size: 0.9em;
+            color: white;
+            opacity: 0.9;
         }
 
         nav {
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
-        nav a {
-            color: white;
+        .back-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #FFD700;
+            color: #000;
             text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
+            font-weight: 700;
+            border-radius: 6px;
+            border: 2px solid #000;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9em;
         }
 
-        nav a:hover {
-            color: #81a32b;
+        .back-btn:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,215,0,0.4);
         }
 
         .hero {
-            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            background: url('foster-farms-hero.jpg') center center / cover no-repeat;
+            position: relative;
             color: white;
-            padding: 80px 40px;
+            padding: 0;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 8px solid #FFD700;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
             text-align: center;
+            max-width: 900px;
+            padding: 60px 40px;
         }
 
         .hero h1 {
-            font-size: 3em;
+            font-size: 4em;
             margin-bottom: 20px;
-            font-weight: 700;
+            font-weight: 900;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+            color: #FFD700;
+            letter-spacing: 2px;
         }
 
         .hero p {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            opacity: 0.95;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            font-weight: 600;
         }
 
         .subtitle {
-            font-size: 1.1em;
-            opacity: 0.9;
-            margin-bottom: 30px;
+            font-size: 1.2em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: #FFD700;
+            color: #000;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.3em;
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 3px solid #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,215,0,0.5);
+            background: #FFF;
         }
 
         .container {
@@ -90,7 +163,7 @@
 
         .section-title {
             font-size: 2.2em;
-            color: #314100;
+            color: #CC0000;
             margin-bottom: 30px;
             text-align: center;
             font-weight: 700;
@@ -133,11 +206,11 @@
             border-radius: 12px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             text-align: center;
-            border-top: 4px solid #d37100;
+            border-top: 4px solid #FFD700;
         }
 
         .highlight-card h3 {
-            color: #d37100;
+            color: #CC0000;
             margin-bottom: 15px;
             font-size: 1.3em;
         }
@@ -158,7 +231,7 @@
 
         .expert-name {
             font-size: 1.8em;
-            color: #314100;
+            color: #CC0000;
             margin-bottom: 10px;
             font-weight: 700;
         }
@@ -179,12 +252,13 @@
         }
 
         .cta-section {
-            background: linear-gradient(135deg, #314100 0%, #5a7a2a 100%);
+            background: linear-gradient(135deg, #CC0000 0%, #8B0000 100%);
             color: white;
             padding: 60px 40px;
             text-align: center;
             border-radius: 12px;
             margin: 50px 0;
+            border: 5px solid #FFD700;
         }
 
         .cta-section h2 {
@@ -211,8 +285,9 @@
         }
 
         .btn-primary {
-            background: white;
-            color: #314100;
+            background: #FFD700;
+            color: #8B0000;
+            border: 2px solid white;
         }
 
         .btn-primary:hover {
@@ -221,22 +296,49 @@
         }
 
         .btn-secondary {
-            background: #314100;
-            color: white;
+            background: #8B0000;
+            color: #FFD700;
             margin-top: 15px;
+            border: 2px solid #FFD700;
         }
 
         .btn-secondary:hover {
-            background: #5a7a2a;
+            background: #CC0000;
             transform: translateY(-2px);
         }
 
         footer {
-            background: #2c3e50;
+            background: #8B0000;
             color: white;
-            text-align: center;
-            padding: 30px;
+            padding: 40px;
             margin-top: 60px;
+            border-top: 3px solid #FFD700;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-logos {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .footer-logo {
+            height: 60px;
+            width: auto;
         }
 
         @media (max-width: 768px) {
@@ -266,18 +368,25 @@
 </head>
 <body>
     <header>
-        <div class="logo">⚡ <span>UNITY</span> ENERGY</div>
+        <div>
+            <div class="site-title">Foster Farms</div>
+            <div class="site-subtitle">Cherry Avenue Site - Energy Field Analysis</div>
+        </div>
         <nav>
-            <a href="#welcome">Welcome</a>
-            <a href="#analysis">Analysis</a>
-            <a href="#explore">Explore</a>
+            <a href="../index.html" class="back-btn">← Back to Sites</a>
         </nav>
     </header>
 
     <div class="hero">
-        <h1>Cherry Avenue Site</h1>
-        <p>Foster Farms - Electrical Energy Field Analysis</p>
-        <p class="subtitle">Fresno, California</p>
+        <div class="hero-content">
+            <h1>Electrical Energy Stewardship</h1>
+            <p>Foster Farms - Cherry Avenue Site</p>
+            <p class="subtitle">Fresno, California</p>
+            <div class="hero-buttons">
+                <a href="#welcome" class="hero-btn">Learn More</a>
+                <a href="./Study260106r0/FosterFarms/CherryAve_Site/SITE-FosterFarms-Summaryboard_CherryAve-4_1minRES_251001-251031_31d.html" class="hero-btn">View Dashboard</a>
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -364,8 +473,18 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Unity Energy. All rights reserved.</p>
-        <p>Transforming how facilities understand their electrical systems.</p>
+        <div class="footer-content">
+            <div class="footer-logos">
+                <img src="Foster_Farms_logo.png" alt="Foster Farms" class="footer-logo">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2026 Unity Energy. All rights reserved.</p>
+                <p>Transforming how facilities understand their electrical systems.</p>
+            </div>
+            <div class="footer-logos">
+                <img src="unity-logo.png" alt="Unity Energy" class="footer-logo">
+            </div>
+        </div>
     </footer>
 </body>
 </html>

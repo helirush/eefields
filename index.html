@@ -111,28 +111,28 @@
             box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
 
-        .portal-card a {
+        .portal-card.clickable {
             text-decoration: none;
             color: inherit;
-            display: block;
+            cursor: pointer;
         }
 
         .portal-card h3 {
             color: #314100;
             margin-bottom: 15px;
-            font-size: 1.6em;
+            font-size: 2em;
         }
 
         .portal-card p {
             color: #666;
-            font-size: 0.95em;
+            font-size: 1.1em;
             margin-bottom: 20px;
         }
 
         .cta-link {
             color: #d37100;
             font-weight: 600;
-            font-size: 1.05em;
+            font-size: 1.3em;
             margin-top: 20px;
         }
 
@@ -191,14 +191,12 @@
             </p>
 
             <div class="portals">
-                <div class="portal-card">
-                    <a href="./fosterfarms/">
-                        <h3>🚜 Foster Farms</h3>
-                        <p>Cherry Avenue Site Analysis</p>
-                        <p style="font-size: 0.85em; color: #999;">Monthly Energy Field Reports</p>
-                        <div class="cta-link">Access Portal →</div>
-                    </a>
-                </div>
+                <a href="./fosterfarms/index.html" class="portal-card clickable">
+                    <h3>🐔 Foster Farms</h3>
+                    <p>Cherry Avenue Site Analysis</p>
+                    <p style="font-size: 1em; color: #999;">Monthly Energy Field Reports</p>
+                    <div class="cta-link">Access Portal →</div>
+                </a>
 
                 <div class="portal-card coming-soon">
                     <h3>🔜 More Coming</h3>
